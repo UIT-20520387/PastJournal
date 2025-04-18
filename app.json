@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "scheme": "com.supabase",
+    "deepLinking": true,
+    "name": "Hiscovery",
+    "slug": "Hiscovery",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon-hiscovery.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-hiscovery.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "experiments": {
+      "newArchEnabled": true
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-hiscovery.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.supabase.hiscovery",
+      "targetSdkVersion": 30
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router", "expo-font"],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c04fdbfe-dac9-4277-bf49-b5541e403423"
+      }
+    }
+  }
+}
