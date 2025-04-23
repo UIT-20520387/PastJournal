@@ -42,7 +42,6 @@ export default function CategoryList() {
       const getData = async () => {
         let { data, error } = await supabase.rpc("get_category_list");
         if (error) console.error(error);
-        // else console.log(data)
   
         setCategories(data);
       };
@@ -52,7 +51,6 @@ export default function CategoryList() {
   
     return (
       <View style={styles.container}>
-        {/* <Stack.Screen options={{ headerShown: true, title: "Category" }} /> */}
         <FlatList
           data={categories}
           renderItem={CategoryButton}
