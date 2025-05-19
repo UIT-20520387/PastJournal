@@ -147,10 +147,10 @@ export default function MorePage() {
           />
           <View style={styles.footer}>
             <Image
-              source={require("../../../assets/adaptive-icon-hiscovery.png")}
+              source={require("../../../assets/adaptive-icon-pj.png")}
               style={styles.logo}
             />
-            <Text style={styles.footerTitle}>HisCovery</Text>
+            <Text style={styles.footerTitle}>PastJournal</Text>
             <Text style={styles.footerText}>
               Nếu bạn có thắc mắc gì thêm, hãy liên hệ chúng tôi tại địa chỉ:
             </Text>

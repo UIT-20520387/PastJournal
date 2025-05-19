@@ -2,14 +2,14 @@
   "expo": {
     "scheme": "com.supabase",
     "deepLinking": true,
-    "name": "Hiscovery",
-    "slug": "Hiscovery",
+    "name": "PastJournal",
+    "slug": "PastJournal",
     "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon-hiscovery.png",
+    "icon": "./assets/icon-pj.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash-hiscovery.png",
+      "image": "./assets/splash-pj.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,10 +22,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon-hiscovery.png",
+        "foregroundImage": "./assets/adaptive-icon-pj.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.supabase.hiscovery",
+      "package": "com.supabase.pastjournal",
       "targetSdkVersion": 30
     },
     "web": {
