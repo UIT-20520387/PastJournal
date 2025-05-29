@@ -87,11 +87,14 @@ const Page = () => {
             )
           ),
           headerRight: () => (
-            <View style={{ flexDirection: 'row' }}>
-              <TouchableOpacity onPress={handleSearchIconClick}>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <TouchableOpacity
+                onPress={handleSearchIconClick}
+                style={{ marginRight: 16 }}
+              >
                 <icons.search fill={COLORS.iconColor} />
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => router.push('/notification')}>
+              <TouchableOpacity onPress={() => router.push("/notification")}>
                 <icons.notification fill={COLORS.iconColor} />
               </TouchableOpacity>
             </View>
