@@ -83,8 +83,11 @@ const FeedbackPage = (onClose = null) => {
         <SafeAreaView>
           <Stack.Screen
             options={{
-              headerTitle: () => <Header title="Feedback" iconvisible={false} />,
-            }} />
+              headerTitle: () => (
+                <Header title="Feedback" iconvisible={false} />
+              ),
+            }}
+          />
         </SafeAreaView>
         <ScrollView style={{ flex: 1 }}>
           <View style={styles.content}>
@@ -100,7 +103,7 @@ const FeedbackPage = (onClose = null) => {
             </View>
             <View style={styles.inputContainer}>
               <Text style={styles.subtitle}>
-                Theo bạn, HisCovery cần những điểm nào cần cải thiện?
+                Theo bạn, PastJournal cần những điểm nào cần cải thiện?
               </Text>
               <TextInput
                 style={[styles.input, styles.descriptionInput]}
@@ -115,7 +118,6 @@ const FeedbackPage = (onClose = null) => {
             <Text style={styles.sendButtonText}>Gửi</Text>
           </TouchableOpacity>
         </ScrollView>
-
       </View>
     </ProtectedRoute>
   );

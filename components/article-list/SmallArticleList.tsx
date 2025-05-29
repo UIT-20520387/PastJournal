@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import ItemWatchLater, { ArticleData } from '../articleCard/SmallArticleCard';
+// import { COLORS, SIZES } from '../../constants/theme';
 import { supabase } from '../../lib/supabase';
 
 interface SmallArticleListProps {

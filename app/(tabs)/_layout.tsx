@@ -1,17 +1,19 @@
 import { Tabs } from "expo-router";
-import { View, TouchableNativeFeedback, Platform, TouchableOpacity } from "react-native"; // Import TouchableNativeFeedback
+import {
+  View,
+  TouchableNativeFeedback,
+  Platform,
+  TouchableOpacity,
+  GestureResponderEvent,
+} from "react-native"; // Import TouchableNativeFeedback
 import { icons } from "../../constants";
-import ProtectedRoute from "../../components/ProtectedRoute";
-import React from "react";
-
+import React, { ComponentType } from "react";
 
 export default function TabsLayout() {
   const TouchableComponent =
     Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity; // Determine the Touchable component based on the platform
 
   return (
-
-
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -90,17 +92,27 @@ export default function TabsLayout() {
         }}
       />
     </Tabs>
-
-
   );
 }
 
 // Custom TabBarButton component with ripple effect
-const TabBarButton = ({ children, onPress, TouchableComponent }) => {
+const TabBarButton = ({
+  children,
+  onPress = () => {},
+  TouchableComponent,
+}: {
+  children: React.ReactNode;
+  onPress?: (event: GestureResponderEvent) => void;
+  TouchableComponent: ComponentType<any>; // 👈 Type này được JSX hiểu
+}) => {
+  const ripple =
+    Platform.OS === "android"
+      ? TouchableNativeFeedback.Ripple("#F1DBE2", true)
+      : undefined;
   return (
     <TouchableComponent
       onPress={onPress}
-      background={TouchableNativeFeedback.Ripple("#F1DBE2", true)}
+      {...(Platform.OS === "android" ? { background: ripple } : {})}
     >
       <View
         style={{

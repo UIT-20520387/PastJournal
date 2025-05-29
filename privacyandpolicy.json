@@ -1,0 +1,47 @@
+{
+  "chinh_sach_bao_mat": {
+    "1": {
+      "tieude": "Thu thập thông tin",
+      "1.1": "Chúng tôi có thể thu thập thông tin cá nhân của bạn khi bạn sử dụng ứng dụng của chúng tôi, bao gồm tên, địa chỉ email và thông tin đăng nhập.",
+      "1.2": "Thông tin về thiết bị, vị trí địa lý và hành vi sử dụng cũng có thể được tự động thu thập để cải thiện trải nghiệm của bạn."
+    },
+    "2": {
+      "tieude": "Sử dụng thông tin",
+      "2.1": "Thông tin cá nhân của bạn sẽ được chúng tôi sử dụng để cung cấp dịch vụ và nội dung cá nhân hóa cho bạn.",
+      "2.2": "Chúng tôi cũng có thể sử dụng thông tin của bạn để cải thiện dịch vụ và hiểu rõ hơn về xu hướng sử dụng."
+    },
+    "3": {
+      "tieude": "Chia sẻ thông tin",
+      "3.1": "Chúng tôi cam kết không chia sẻ thông tin cá nhân của bạn với bất kỳ bên thứ ba nào ngoại trừ trường hợp có sự đồng ý của bạn hoặc theo yêu cầu pháp luật.",
+      "3.2": "Thông tin không nhận dạng cá nhân có thể được chia sẻ với các bên thứ ba để nghiên cứu và phân tích xu hướng sử dụng."
+    },
+    "4": {
+      "tieude": "Bảo mật thông tin",
+      "4.1": "Chúng tôi cam kết bảo mật thông tin cá nhân của bạn và đã triển khai các biện pháp an ninh vật lý, kỹ thuật và quản lý để bảo vệ thông tin khỏi mất mát, lạc hậu hoặc truy cập trái phép."
+    },
+    "5": {
+      "tieude": "Liên hệ chúng tôi",
+      "5.1": "Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về chính sách bảo mật của chúng tôi, vui lòng liên hệ với chúng tôi qua email huyrino@gmail.com."
+    }
+  },
+  "dieu_khoan_su_dung": {
+    "1": {
+      "tieude": "Sử dụng dịch vụ",
+      "1.1": "Bạn cam kết chỉ sử dụng ứng dụng cho mục đích hợp pháp và tuân thủ các quy định được quy định trong Điều khoản Sử dụng này.",
+      "1.2": "Bạn không được sử dụng ứng dụng để vi phạm pháp luật hoặc quyền riêng tư của người khác."
+    },
+    "2": {
+      "tieude": "Bảo vệ dữ liệu",
+      "2.1": "Bạn chịu trách nhiệm bảo vệ thông tin đăng nhập của mình và không chia sẻ nó với bất kỳ ai khác.",
+      "2.2": "Bạn cam kết không sử dụng thông tin cá nhân của người khác mà không có sự đồng ý của họ."
+    },
+    "3": {
+      "tieude": "Thay đổi và cập nhật",
+      "3.1": "Chúng tôi có quyền thay đổi hoặc cập nhật Điều khoản Sử dụng này mà không cần thông báo trước. Việc tiếp tục sử dụng ứng dụng sau khi thay đổi có nghĩa là bạn chấp nhận các thay đổi đó."
+    },
+    "4": {
+      "tieude": "Liên hệ chúng tôi",
+      "4.1": "Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Điều khoản Sử dụng của chúng tôi, vui lòng liên hệ với chúng tôi qua email huyrino@gmail.com."
+    }
+  }
+}
