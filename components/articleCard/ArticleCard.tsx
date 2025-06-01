@@ -203,6 +203,7 @@ const styles = StyleSheet.create({
     width: 13,
     height: 13,
     justifyContent: "center",
+    marginLeft: 5,
   },
   commentIconParent: {
     width: 22,
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
   bookmarkIcon: {
     width: 25,
     height: 25,
-    marginLeft: 5,
+    marginLeft: 10,
   },
   frameParent: {
     justifyContent: "space-between",
