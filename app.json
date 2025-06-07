@@ -3,7 +3,7 @@
     "scheme": "com.supabase",
     "deepLinking": true,
     "name": "PastJournal",
-    "slug": "PastJournal",
+    "slug": "pastjournal",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon-pj.png",
@@ -16,7 +16,9 @@
     "experiments": {
       "newArchEnabled": true
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -31,14 +33,18 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router", "expo-font"],
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "c04fdbfe-dac9-4277-bf49-b5541e403423"
+        "projectId": "857402b4-df71-4096-a4ff-923a112f75c9"
       }
-    }
+    },
+    "owner": "alse246"
   }
 }
