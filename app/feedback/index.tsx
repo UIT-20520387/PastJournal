@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons"; // Assuming you're using Expo
 import { Stack, router } from "expo-router";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import { supabase } from "../../lib/supabase";
@@ -31,7 +30,7 @@ const FeedbackPage = (onClose = null) => {
     if (!(subject && description)) return;
 
     try {
-      const { data: report, error } = await supabase.rpc("add_new_report", {
+      const { data: report, error } = await supabase.rpc("add_new_feedback", {
         this_user_id: userSessionID || 2,
         this_description: description,
         this_subject: subject,
@@ -40,7 +39,7 @@ const FeedbackPage = (onClose = null) => {
       if (error || !report) {
         throw error || new Error("Feedback failed.");
       } else {
-        onClose();
+        router.back();
       }
     } catch (error) {
       console.error("Error fetching Feedback:", error);
