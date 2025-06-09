@@ -8,36 +8,38 @@ import {
   SafeAreaView,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { Stack, router } from "expo-router";
+import { Stack, router, useLocalSearchParams } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import { supabase } from "../../lib/supabase";
+import { useRoute } from "@react-navigation/native";
 
-const ReportPage = ({ source_id, onClose = null }) => {
+const ReportPage = ({ art_id, onClose = () => {} }) => {
   const [selectedSubject, setSelectedSubject] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("violence_language");
   const [otherSubject, setOtherSubject] = useState("");
   const [userSessionID, setUserSessionID] = useState(null);
+  const { source_id } = useLocalSearchParams<{ source_id: string }>();
 
   const handleReport = async () => {
     // Handle report submission here
     console.log("Selected Subject:", selectedSubject);
     console.log("Description:", description);
     console.log("Other Subject:", otherSubject);
-
+    console.log("Source ID:", source_id!);
     try {
       const { data: report, error } = await supabase.rpc("add_new_report", {
-        source_id: source_id,
+        source_id: source_id!,
         this_user_id: userSessionID || 2,
         this_description: selectedSubject || otherSubject,
-        this_type: 'article',
+        this_type: "article",
         this_content: description,
       });
 
       if (error || !report) {
         throw error || new Error("Report failed.");
       } else {
-        onClose();
+        router.back();
       }
     } catch (error) {
       console.error("Error fetching Report:", error);
@@ -46,20 +48,20 @@ const ReportPage = ({ source_id, onClose = null }) => {
 
   const fetchData = async () => {
     try {
-      const { data: sessionData, error: sessionError } = await supabase.auth.refreshSession();
+      const { data: sessionData, error: sessionError } =
+        await supabase.auth.refreshSession();
       if (sessionError) {
         console.log(sessionError);
         //redirect to SignIn
         router.push(`/auth`);
-        onClose();
+        router.back();
         return;
       }
       if (sessionData && sessionData.user) {
-        let { data, error } = await supabase
-          .rpc('get_id_by_email', {
-            p_email: sessionData.user.email
-          })
-        if (error) console.error(error)
+        let { data, error } = await supabase.rpc("get_id_by_email", {
+          p_email: sessionData.user.email,
+        });
+        if (error) console.error(error);
         else {
           setUserSessionID(data);
           // console.log('Id here', data)
@@ -68,7 +70,7 @@ const ReportPage = ({ source_id, onClose = null }) => {
     } catch (error) {
       console.error("Error fetching user session:", error);
     }
-  }
+  };
 
   useEffect(() => {
     fetchData();

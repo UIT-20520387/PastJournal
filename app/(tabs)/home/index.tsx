@@ -1,6 +1,13 @@
 //app/(tabs)/home/index.tsx
 import { Stack, Link, useLocalSearchParams, useRouter } from "expo-router";
-import { StyleSheet, TextInput, View, Image, TouchableOpacity, ActivityIndicator } from "react-native";
+import {
+  StyleSheet,
+  TextInput,
+  View,
+  Image,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import React, { useState, useEffect } from "react";
 import { icons, COLORS, SIZES } from "../../../constants";
 import CustomTabBar from "../../../components/tab-custom/CustomTabBar";
@@ -18,13 +25,14 @@ const Page = () => {
 
   const handleSearchIconClick = () => {
     if (isSearchVisible) {
-      if (searchValue.trim() !== "") { // Check if searchValue is not empty
+      if (searchValue.trim() !== "") {
+        // Check if searchValue is not empty
         // Navigate to the search page
         router.push("/search/" + searchValue);
         setSearchValue(""); // Clear the search field
       }
     }
-    setSearchVisible(!isSearchVisible)
+    setSearchVisible(!isSearchVisible);
   };
 
   useEffect(() => {
@@ -56,7 +64,7 @@ const Page = () => {
 
   // console.log("nestedTabs", nestedTabs);
   if (!nestedTabs) {
-    return <ActivityIndicator size="large" color={COLORS.darkRed} />
+    return <ActivityIndicator size="large" color={COLORS.darkRed} />;
   }
 
   return (
@@ -68,12 +76,12 @@ const Page = () => {
               <icons.category fill={COLORS.iconColor} />
             </Link>
           ),
-          headerTitle: () => (
+          headerTitle: () =>
             isSearchVisible ? (
               <TextInput
                 placeholder="Search..."
                 value={searchValue}
-                onChangeText={text => setSearchValue(text)}
+                onChangeText={(text) => setSearchValue(text)}
               />
             ) : (
               <Image
@@ -84,8 +92,7 @@ const Page = () => {
                   resizeMode: "contain",
                 }}
               />
-            )
-          ),
+            ),
           headerRight: () => (
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <TouchableOpacity

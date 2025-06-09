@@ -57,8 +57,8 @@ const Article = () => {
   };
 
   const navigateReport = () => {
-    console.log("Redirecting to report");
-    router.push("/report/");
+    console.log("Redirecting to report", article_id);
+    router.push(`/report/${article_id}`);
   };
 
   useEffect(() => {
